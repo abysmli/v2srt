@@ -29,9 +29,20 @@ A robust command-line tool to automatically transcribe audio/video files using W
     cd v2srt
     ```
 
-2.  **Install Whisper:** This tool requires OpenAI's Whisper to be installed. Please follow the [official installation instructions](https://github.com/openai/whisper#setup).
+2.  **Install System Dependencies (ffmpeg)**: Whisper requires `ffmpeg` to be installed on your system for audio/video processing.
 
-3.  **Install Python dependencies:**
+    -   On Debian/Ubuntu:
+        ```bash
+        sudo apt update && sudo apt install ffmpeg
+        ```
+    -   On macOS (using Homebrew):
+        ```bash
+        brew install ffmpeg
+        ```
+
+3.  **Install Whisper:** This tool requires OpenAI's Whisper to be installed. Please follow the [official installation instructions](https://github.com/openai/whisper#setup).
+
+4.  **Install Python dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
@@ -148,9 +159,20 @@ Miscellaneous:
     cd v2srt
     ```
 
-2.  **安装 Whisper：** 本工具依赖 OpenAI Whisper。请遵循 [官方安装指南](https://github.com/openai/whisper#setup) 进行安装。
+2.  **安装系统依赖 (ffmpeg)**：Whisper 依赖 `ffmpeg` 来处理音视频文件。请确保您的系统上已安装此程序。
 
-3.  **安装 Python 依赖包：**
+    -   在 Debian/Ubuntu 上:
+        ```bash
+        sudo apt update && sudo apt install ffmpeg
+        ```
+    -   在 macOS 上 (使用 Homebrew):
+        ```bash
+        brew install ffmpeg
+        ```
+
+3.  **安装 Whisper：** 本工具依赖 OpenAI Whisper。请遵循 [官方安装指南](https://github.com/openai/whisper#setup) 进行安装。
+
+4.  **安装 Python 依赖包：**
     ```bash
     pip install -r requirements.txt
     ```
