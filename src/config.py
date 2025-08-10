@@ -15,7 +15,7 @@ class Config:
     DEFAULT_WHISPER_MODEL = "large"
     DEFAULT_CONCURRENCY = 5
     MAX_VALIDATION_RETRIES = 3
-    API_URL = "https://api.x.ai/v1/chat/completions"
+    DEFAULT_API_URL = "https://api.x.ai/v1/chat/completions"
 
 LANG_MAP = {
     'en': 'English', 'zh': 'Chinese', 'ja': 'Japanese', 'es': 'Spanish',

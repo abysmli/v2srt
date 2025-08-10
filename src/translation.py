@@ -23,6 +23,7 @@ class Translator:
     Manages API calls to the translation service.
     """
     def __init__(self, args):
+        self.api_url = args.api_url
         self.api_key = args.api_key
         self.model = args.model
         self.separator = args.separator
@@ -134,7 +135,7 @@ You MUST translate the following {from_lang} text into {to_lang}. Do not use any
 
         try:
             response = subprocess.run(
-                ['curl', '-s', '-X', 'POST', Config.API_URL, '-H', f"Authorization: Bearer {self.api_key}", '-H', 'Content-Type: application/json', '-d', json.dumps(data)],
+                ['curl', '-s', '-X', 'POST', self.api_url, '-H', f"Authorization: Bearer {self.api_key}", '-H', 'Content-Type: application/json', '-d', json.dumps(data)],
                 capture_output=True, text=True, check=True, encoding='utf-8'
             )
             response_json = json.loads(response.stdout)
